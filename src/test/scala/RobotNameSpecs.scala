@@ -4,7 +4,7 @@ class RobotNameSpecs extends FunSpec with Matchers {
   val nameRegex = """\w{2}\d{3}"""
 
   it ("has a name") {
-    new Robot().name should fullyMatch regex (nameRegex)
+    new Robot().name should fullyMatch regex nameRegex
   }
 
   it ("does not change its name") {
@@ -16,7 +16,7 @@ class RobotNameSpecs extends FunSpec with Matchers {
 
   it ("does not have the same name as other robots") {
     pending
-    new Robot().name should not be (new Robot().name)
+    new Robot().name should not be new Robot().name
   }
 
   it ("can have its name reset") {
@@ -25,7 +25,7 @@ class RobotNameSpecs extends FunSpec with Matchers {
     val name = robot.name
     robot.reset()
     val name2 = robot.name
-    name should not equal (name2)
-    name2 should fullyMatch regex (nameRegex)
+    name should not equal name2
+    name2 should fullyMatch regex nameRegex
   }
 }
