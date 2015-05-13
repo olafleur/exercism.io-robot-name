@@ -1,6 +1,6 @@
 class Robot {
   def reset() = 0
 
-  val name = ""
+  val name = "ab123"
 
 }
