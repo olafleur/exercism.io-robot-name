@@ -8,7 +8,6 @@ class RobotNameSpecs extends FunSpec with Matchers {
   }
 
   it ("does not change its name") {
-    pending
     val robot = new Robot
     val name = robot.name
     robot.name should be (name)
