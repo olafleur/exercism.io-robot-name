@@ -14,7 +14,6 @@ class RobotNameSpecs extends FunSpec with Matchers {
   }
 
   it ("does not have the same name as other robots") {
-    pending
     new Robot().name should not be new Robot().name
   }
 
