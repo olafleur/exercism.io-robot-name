@@ -1,14 +1,17 @@
 import scala.util.Random
 
 class Robot {
-  private val real_name = reset()
+  private val real_name = s"ab$randomizeNumber"
   def reset() = {
-    val rand = new Random()
-    val number = rand.nextInt(900) + 100
-
-    s"ab$number"
+    name = s"ab$randomizeNumber"
   }
 
-  val name = real_name
+  def randomizeNumber: Int = {
+    val rand = new Random()
+    val number = rand.nextInt(900) + 100
+    number
+  }
+
+  var name = real_name
 
 }
